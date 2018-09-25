@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2036
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Razor Basics", "Razor Basics\Razor Basics.csproj", "{07F116F8-E569-4AB1-B8D6-4CB4B9580005}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RazorBasics", "Razor Basics\RazorBasics.csproj", "{07F116F8-E569-4AB1-B8D6-4CB4B9580005}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

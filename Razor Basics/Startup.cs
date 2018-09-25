@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using RazorBasics.Services;
 
 namespace Razor_Basics {
     public class Startup {
@@ -26,7 +27,8 @@ namespace Razor_Basics {
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-
+            services.AddScoped<IInventoryService, InventoryService>();
+            services.AddSingleton<ISurveyService, SurveyService>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 

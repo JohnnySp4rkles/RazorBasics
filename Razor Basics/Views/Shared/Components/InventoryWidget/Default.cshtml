@@ -1,0 +1,32 @@
+﻿@model List<RazorBasics.Components.InventoryItem>
+
+<div class="panel panel-warning widget">
+    <div class="panel-heading">
+        <div class="row">
+            <div class="col-xs-3">
+                <i class="fa fa-exclamation-triangle fa-3x"></i>
+            </div>
+            <div class="col-xs-9 text-right">
+                <h3>Low Inventory Widget</h3>
+            </div>
+        </div>
+    </div>
+    <div class="widget-display">
+        <table class="table table-fluid table-striped">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Inv. Count</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model) {
+                    <tr>
+                        <td>@item.Name</td>
+                        <td><a href="#">@item.Count</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
