@@ -7,24 +7,30 @@ using System.Threading.Tasks;
 
 namespace RazorBasics.Models {
     public class Client {
-        //[Required]
+        [Required]
         public string FirstName { get; set; }
-        //[Required]
+        [Required]
+        [Display(Name = "Last Name")]
         public string LastName { get; set; }
-        //[Required]
+        [Required]
         public string CompanyName { get; set; }
-        //[Required]
-        //[EmailAddress]
-        //[Remote("VerifyEmail", "Client")]
+        [Required]
+        [EmailAddress]
+        [Remote("VerifyEmail", "Client")]
         public string Email { get; set; }
-        //[Required]
+        [Required]
         public string Phone { get; set; }
-        //[Required]
+        [Required]
+        [DataType(DataType.Date)]
         public DateTime? ContactDate { get; set; }
-        //[Required]
+        [Required]
         public string ClientType { get; set; }
-        //[Required]
-        //[MaxLength(25)]
+        [Required]
+        public string NearestLocation { get; set; }
+        [Required]
+        [MaxLength(25)]
+        [DataType(DataType.MultilineText)]
+        [UIHint("MultilineTextLarge")]
         public string Notes { get; set; }
         public List<EmailPromo> EmailPromos { get; set; }
         public Address BillingAddress { get; set; }
